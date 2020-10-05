@@ -1,0 +1,20 @@
+[
+  { 
+        "remote"       : "github",
+        "repository"   : "dataoutputstream/device_xiaomi_sm8250_common",
+        "target_path"  : "device/xiaomi/sm8250_common",
+        "branch"       : "lineage-17.1"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "dataoutputstream/vendor_xiaomi_sm8250_common",
+        "target_path"  : "vendor/xiaomi/sm8250_common",
+        "branch"       : "prebuilt-12.0.1"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "dataoutputstream/lineage_system_sepolicy",
+        "target_path"  : "system/sepolicy",
+        "branch"       : "master"
+    }
+]
