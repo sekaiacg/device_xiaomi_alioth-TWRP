@@ -15,15 +15,18 @@ PRODUCT_NAME := lineage_umi
 PRODUCT_DEVICE := umi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := Mi 10
 
-# Build info
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=umi \
-    PRODUCT_NAME=umi
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="qssi-user 10 QKQ1.191117.002 V12.0.1.0.QJBEUXM release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DISC="coral-user 11 RP1A.201005.004 6782484 release-keys" \
+    PRODUCT_DEVICE=umi \
+    PRODUCT_NAME=umi
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Xiaomi/umi_eea/umi:10/QKQ1.191117.002/V12.0.1.0.QJBEUXM:user/release-keys
+BUILD_FINGERPRINT := google/coral/coral:11/RP1A.201005.004/6782484:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
