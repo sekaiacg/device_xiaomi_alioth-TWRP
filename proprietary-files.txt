@@ -944,6 +944,7 @@ vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so
 vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.1.so
 vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so
 vendor/lib/vendor.xiaomi.hardware.citvendorservice@1.0.so
+vendor/lib64/hw/vendor.xiaomi.hardware.citvendorservice@1.0-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so
