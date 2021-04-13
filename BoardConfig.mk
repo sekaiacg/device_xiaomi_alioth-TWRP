@@ -8,14 +8,19 @@ DEVICE_PATH := device/xiaomi/umi
 
 # Inherit from sm8250-common
 -include device/xiaomi/sm8250-common/BoardConfigCommon.mk
+-include vendor/xiaomi/umi/BoardConfigVendor.mk
+
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := umi
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+
 # Prebuilt Core
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+
+# Kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
-#BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-#BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_KERNEL_CONFIG := vendor/umi_defconfig
 
