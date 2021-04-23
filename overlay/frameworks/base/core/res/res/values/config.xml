@@ -51,38 +51,17 @@
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">98</integer>
-    
-   
-    
-      <!-- An array describing the screen's backlight values corresponding to the brightness
-         values in the config_screenBrightnessNits array.
-         This array should be equal in size to config_screenBrightnessBacklight. -->
-    <integer-array name="config_screenBrightnessBacklight">
-        <item>1</item>
-        <item>255</item>
-    </integer-array>
-
-    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
-         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
-         should be measured with an all white image while the display is in the fully on state.
-         Note that this value should *not* reflect the maximum brightness value for any high
-         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
-         This array should be equal in size to config_screenBrightnessBacklight -->
-    <array name="config_screenBrightnessNits">
-        <item>2.0</item>
-        <item>500.0</item>
-    </array>
+    <integer name="config_screenBrightnessSettingDefault">1072</integer>
     
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+    <integer name="config_screenBrightnessSettingMinimum">12</integer>
 
 
     
     <!-- Maximum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness above this level. -->
-    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingMaximum">4095</integer>
     
 
      <!-- Control whether Night display is available. This should only be enabled on devices
@@ -107,56 +86,7 @@
      <!-- Slow brightness animation ramp rate in brightness units per second-->
      <integer name="config_brightness_ramp_rate_slow">60</integer>
      
-     <!-- The bounding path of the cutout region of the main built-in display.
-         Must either be empty if there is no cutout region, or a string that is parsable by
-         {@link android.util.PathParser}.
-         The path is assumed to be specified in display coordinates with pixel units and in
-         the display's native orientation, with the origin of the coordinate system at the
-         center top of the display.
-         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
-         appended after the path string to interpret coordinates in dp instead of px units.
-         Note that a physical cutout should be configured in pixels for the best results.
-         Example for a 10px x 10px square top-center cutout:
-                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
-         Example for a 10dp x 10dp square top-center cutout:
-                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
-         @see https://www.w3.org/TR/SVG/paths.html#PathData
-         -->
-     <string translatable="false" name="config_mainBuiltInDisplayCutout">M -903,0 H -1080 V 90 H -903 V 0 Z@right</string>
-
-    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
-         one single bounding rect per device edge to the app via
-         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
-         appearance of the cutout as much as possible, and may be smaller than
-         config_mainBuiltInDisplayCutout
-         -->
-     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-         M -903,0 H -1080 V 90 H -903 V 0 Z@right
-     </string>
      
-     
-    <!-- Height of the status bar in portrait -->
-    <dimen name="status_bar_height_portrait">120px</dimen>
-
-    <!-- Height of the status bar in landscape -->
-    <dimen name="status_bar_height_landscape">24dp</dimen>
-
-
-    <!-- Radius of the software rounded corners at the top of the display in its natural
-        orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_top">110px</dimen>
-
-    <!-- Radius of the software rounded corners at the bottom of the display in its natural
-        orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">110px</dimen>
-    
-    
-    <!-- Whether device supports in-display fingerprint when screen is turned off -->
-    <bool name="config_supportsInDisplayFingerprintGesture">true</bool>
-    
-    <!-- Whether device supports in-display fingerprint -->
-    <bool name="config_supportsInDisplayFingerprint">true</bool>
-    
      <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
      <bool name="config_automatic_brightness_available">true</bool>
@@ -169,7 +99,7 @@
          Zone N:        array[N - 1] <= LUX < array[N]
          Zone N + 1     array[N] <= LUX < infinity
          Must be overridden in platform specific overlays -->
-     <integer-array name="config_autoBrightnessLevels">
+     <array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>2</item>
         <item>4</item>
@@ -221,13 +151,63 @@
         <item>1500</item>
         <item>1700</item>
         <item>1900</item>
-        <item>2000</item>
+        <item>2200</item>
         <item>2500</item>
         <item>3000</item>
         <item>3500</item>
         <item>4000</item>
         <item>4500</item>
-    </integer-array>
+        <item>5000</item>
+        <item>5500</item>
+        <item>6000</item>
+        <item>6500</item>
+        <item>7000</item>
+        <item>7500</item>
+        <item>8000</item>
+        <item>8500</item>
+        <item>9000</item>
+        <item>9500</item>
+        <item>10000</item>
+        <item>10500</item>
+        <item>11000</item>
+        <item>11500</item>
+        <item>12000</item>
+        <item>12500</item>
+        <item>13000</item>
+        <item>13500</item>
+        <item>14000</item>
+        <item>14500</item>
+        <item>15000</item>
+        <item>16000</item>
+        <item>17000</item>
+        <item>18000</item>
+        <item>19000</item>
+        <item>20000</item>
+        <item>21000</item>
+        <item>22000</item>
+        <item>23000</item>
+        <item>24000</item>
+        <item>25000</item>
+        <item>26000</item>
+        <item>27000</item>
+        <item>28000</item>
+        <item>29000</item>
+        <item>30000</item>
+        <item>35000</item>
+        <item>40000</item>
+        <item>45000</item>
+        <item>50000</item>
+        <item>55000</item>
+        <item>60000</item>
+        <item>65000</item>
+        <item>70000</item>
+        <item>75000</item>
+        <item>80000</item>
+        <item>85000</item>
+        <item>90000</item>
+        <item>95000</item>
+        <item>100000</item>
+    </array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
@@ -240,13 +220,13 @@
          This array should have size one greater than the size of the config_autoBrightnessLevels
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
-    <array name="config_autoBrightnessDisplayValuesNits">
-        <item>5</item>
-        <item>5</item>
-        <item>5</item>
-        <item>17</item>
-        <item>24</item>
-        <item>31</item>
+      <array name="config_autoBrightnessDisplayValuesNits">
+        <item>4.5</item>
+        <item>6.6</item>
+        <item>8</item>
+        <item>20</item>
+        <item>24.3</item>
+        <item>29.7</item>
         <item>34</item>
         <item>46</item>
         <item>59</item>
@@ -295,13 +275,175 @@
         <item>280</item>
         <item>295</item>
         <item>369</item>
-        <item>434</item>
+        <item>400</item>
+        <item>416.7</item>
+        <item>433.3</item>
+        <item>450</item>
+        <item>466.7</item>
+        <item>483.3</item>
         <item>500</item>
-        <item>500</item>
-        <item>500</item>
+        <item>512.5</item>
+        <item>525</item>
+        <item>537.5</item>
+        <item>550</item>
+        <item>562.5</item>
+        <item>575</item>
+        <item>587.5</item>
+        <item>600</item>
+        <item>610</item>
+        <item>620</item>
+        <item>630</item>
+        <item>640</item>
+        <item>650</item>
+        <item>660</item>
+        <item>670</item>
+        <item>680</item>
+        <item>690</item>
+        <item>700</item>
+        <item>705</item>
+        <item>710</item>
+        <item>715</item>
+        <item>720</item>
+        <item>725</item>
+        <item>730</item>
+        <item>735</item>
+        <item>740</item>
+        <item>745</item>
+        <item>750</item>
+        <item>755</item>
+        <item>760</item>
+        <item>765</item>
+        <item>770</item>
+        <item>775</item>
+        <item>800</item>
+        <item>816.7</item>
+        <item>833.3</item>
+        <item>850</item>
+        <item>866.7</item>
+        <item>883.3</item>
+        <item>900</item>
+        <item>914.3</item>
+        <item>928.6</item>
+        <item>942.9</item>
+        <item>957.1</item>
+        <item>971.4</item>
+        <item>985.7</item>
+        <item>1000</item>
     </array>
-    <array name="config_ambientBrighteningThresholds">
-        <item>2</item>
+    
+    <array name="config_autoBrightnessLcdBacklightValues">
+        <item>36</item>
+        <item>54</item>
+        <item>65</item>
+        <item>163</item>
+        <item>199</item>
+        <item>243</item>
+        <item>278</item>
+        <item>376</item>
+        <item>483</item>
+        <item>622</item>
+        <item>663</item>
+        <item>671</item>
+        <item>671</item>
+        <item>671</item>
+        <item>679</item>
+        <item>679</item>
+        <item>679</item>
+        <item>687</item>
+        <item>687</item>
+        <item>696</item>
+        <item>696</item>
+        <item>696</item>
+        <item>696</item>
+        <item>704</item>
+        <item>704</item>
+        <item>712</item>
+        <item>728</item>
+        <item>737</item>
+        <item>745</item>
+        <item>761</item>
+        <item>769</item>
+        <item>786</item>
+        <item>794</item>
+        <item>810</item>
+        <item>819</item>
+        <item>827</item>
+        <item>851</item>
+        <item>859</item>
+        <item>868</item>
+        <item>884</item>
+        <item>892</item>
+        <item>909</item>
+        <item>917</item>
+        <item>933</item>
+        <item>950</item>
+        <item>1122</item>
+        <item>1285</item>
+        <item>1474</item>
+        <item>1678</item>
+        <item>1850</item>
+        <item>2104</item>
+        <item>2293</item>
+        <item>2416</item>
+        <item>3022</item>
+        <item>3276</item>
+        <item>3412</item>
+        <item>3549</item>
+        <item>3685</item>
+        <item>3822</item>
+        <item>3958</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+        <item>4095</item>
+    </array>
+    
+   <array name="config_ambientBrighteningThresholds">
+        <item>4</item>
         <item>5</item>
         <item>10</item>
         <item>30</item>
@@ -309,8 +451,8 @@
         <item>400</item>
         <item>600</item>
         <item>1000</item>
-     </array>
-     <array name="config_ambientDarkeningThresholds">
+    </array>
+    <array name="config_ambientDarkeningThresholds">
         <item>800</item>
         <item>800</item>
         <item>500</item>
@@ -319,7 +461,7 @@
         <item>500</item>
         <item>500</item>
         <item>500</item>
-     </array>
+    </array>
      <array name="config_ambientThresholdLevels">
         <item>2</item>
         <item>10</item>
@@ -328,9 +470,9 @@
         <item>800</item>
         <item>2000</item>
         <item>4000</item>
-     </array>
+    </array>
      
-     <array name="config_dynamicHysteresisBrightLevels">
+    <array name="config_dynamicHysteresisBrightLevels">
         <item>2000</item>
         <item>2000</item>
         <item>1000</item>
@@ -367,15 +509,25 @@
     </array>
     <array name="config_screenThresholdLevels">
     </array>
-    
-    <!-- Descendant Screen-Off Fod -->
-    <bool name="config_supportsScreenOffInDisplayFingerprint">true</bool>
-    
+     
         <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
     
-          <!-- Screen off FOD -->
-    <bool name="config_supportScreenOffFod">true</bool>
+     <string name="config_mainBuiltInDisplayCutout">M 0,0 H -23 V 80 H 23 V 0 H 0 Z</string>
      
+    <!-- Height of the status bar in portrait -->
+    <dimen name="status_bar_height_portrait">80px</dimen>
+
+    <!-- Height of the status bar in landscape -->
+    <dimen name="status_bar_height_landscape">24dp</dimen>
+
+    <!-- Radius of the software rounded corners at the top of the display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_top">106px</dimen>
+
+    <!-- Radius of the software rounded corners at the bottom of the display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_bottom">106px</dimen>
+    
     
 </resources>
