@@ -6,18 +6,19 @@
 
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
-$(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 #Audio
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
+     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
      
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
