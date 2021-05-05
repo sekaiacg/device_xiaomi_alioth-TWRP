@@ -8,7 +8,7 @@ DEVICE_PATH := device/xiaomi/alioth
 
 # Inherit from sm8250-common
 -include device/xiaomi/sm8250-common/BoardConfigCommon.mk
--include vendor/xiaomi/alioth/BoardConfigVendor.mk
+#-include vendor/xiaomi/alioth/BoardConfigVendor.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := alioth
