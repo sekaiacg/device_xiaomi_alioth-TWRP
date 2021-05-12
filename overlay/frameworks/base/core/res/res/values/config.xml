@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2009 The Android Open Source Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -88,7 +85,7 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>2.0</item>
-        <item>500.0</item>
+        <item>1000.0</item>
     </array>
     
     <!-- Minimum screen brightness setting allowed by the power manager.
@@ -107,21 +104,26 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">3400</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
     
     
         <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_fast">180</integer>
+    <integer name="config_brightness_ramp_rate_fast">1800</integer>
     
      
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-     <integer name="config_brightness_ramp_rate_slow">60</integer>
+     <integer name="config_brightness_ramp_rate_slow">600</integer>
      
         
      <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
      <bool name="config_automatic_brightness_available">true</bool>
+     
+    <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
+         For this time after the screen turns on, the Power Manager
+         will not debounce light sensor readings -->
+    <integer name="config_lightSensorWarmupTime">200</integer>
      
      <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -252,15 +254,83 @@
         <item>157</item>
         <item>180</item>
         <item>205</item>
-        <item>226</item>
-        <item>257</item>
-        <item>280</item>
-        <item>295</item>
-        <item>369</item>
-        <item>434</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>700</item>
+        <item>815</item>
+        <item>900</item>
+        <item>1000</item>
+        <item>1000</item>
+        <item>1000</item>
+    </array>
+    
+     <array name="config_ambientBrighteningThresholds">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>100</item>
+        <item>400</item>
+        <item>600</item>
+        <item>1000</item>
+     </array>
+     <array name="config_ambientDarkeningThresholds">
+        <item>800</item>
+        <item>800</item>
         <item>500</item>
         <item>500</item>
         <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+     </array>
+     <array name="config_ambientThresholdLevels">
+        <item>2</item>
+        <item>10</item>
+        <item>30</item>
+        <item>100</item>
+        <item>800</item>
+        <item>2000</item>
+        <item>4000</item>
+     </array>
+     
+     <array name="config_dynamicHysteresisBrightLevels">
+        <item>2000</item>
+        <item>2000</item>
+        <item>1000</item>
+        <item>1000</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+    </array>
+    <array name="config_dynamicHysteresisDarkLevels">
+        <item>800</item>
+        <item>800</item>
+        <item>800</item>
+        <item>800</item>
+        <item>800</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+    </array>
+    <array name="config_dynamicHysteresisLuxLevels">
+        <item>2</item>
+        <item>10</item>
+        <item>30</item>
+        <item>100</item>
+        <item>800</item>
+        <item>2000</item>
+        <item>4000</item>
+    </array>
+    <array name="config_screenBrighteningThresholds">
+        <item>@null</item>
+    </array>
+    <array name="config_screenDarkeningThresholds">
+        <item>@null</item>
+    </array>
+    <array name="config_screenThresholdLevels">
     </array>
      
         <!-- Display has physical cutout -->
@@ -288,3 +358,4 @@
     
     
 </resources>
+
