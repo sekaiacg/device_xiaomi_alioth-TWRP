@@ -85,7 +85,7 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>2.0</item>
-        <item>1000.0</item>
+        <item>1300.0</item>
     </array>
     
     <!-- Minimum screen brightness setting allowed by the power manager.
@@ -104,8 +104,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">800</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">800</integer>
     
     
         <!-- Fast brightness animation ramp rate in brightness units per second-->
@@ -261,8 +261,8 @@
         <item>815</item>
         <item>900</item>
         <item>1000</item>
-        <item>1000</item>
-        <item>1000</item>
+        <item>1150</item>
+        <item>1300</item>
     </array>
     
      <array name="config_ambientBrighteningThresholds">
