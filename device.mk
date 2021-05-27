@@ -15,6 +15,13 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-parts.xml
+
 # Keylayout
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
