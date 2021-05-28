@@ -503,6 +503,9 @@ vendor/etc/qdcm_calib_data_td4330_v2_cmd_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_td4330_v2_video_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
 
+#Dolby ADSP Module
+vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
+
 # Firmware
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.b01
