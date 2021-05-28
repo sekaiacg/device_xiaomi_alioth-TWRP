@@ -869,6 +869,7 @@ vendor/lib/libsensorcal.so
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/etc/sensors/hals.conf
 vendor/lib/libsensorslog.so
 vendor/lib/libsensor_cal_for_citvendorservice.so
 vendor/lib/libssc.so
