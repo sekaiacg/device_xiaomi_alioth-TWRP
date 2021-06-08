@@ -10,7 +10,6 @@ DEVICE_PATH := device/xiaomi/alioth
 -include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 -include vendor/xiaomi/alioth/BoardConfigVendor.mk
 
-
 # Assert
 TARGET_OTA_ASSERT_DEVICE := alioth
 
@@ -25,5 +24,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_alioth
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/alioth
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
+
+#Manifest
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
 
 

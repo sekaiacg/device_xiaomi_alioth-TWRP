@@ -1,0 +1,25 @@
+<!--
+    Input:
+        manifest.xml
+        manifest_ss.xml
+        fod.xml
+        manifest.xml
+        manifest.xml
+        manifest.xml
+-->
+<manifest version="2.0" type="device" target-level="4">
+    <!-- fpc fingerprint HAL Service  -->
+    <hal format="hidl"> 
+        <name>com.fingerprints.extension</name> 
+        <transport>hwbinder</transport> 
+     <version>3.0</version> 
+        <interface> 
+             <name>IFingerprintSensorTest</name> 
+             <instance>default</instance> 
+         </interface> 
+        <interface> 
+            <name>IFingerprintNavigation</name> 
+            <instance>default</instance> 
+        </interface> 
+     </hal>
+</manifest>
