@@ -1,0 +1,15 @@
+cc_library_static {
+    name: "libinit_alioth",
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init",
+    ],
+    cflags: [
+        "-Wall",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    srcs: ["init_alioth.cpp"],
+    recovery_available: true,
+}
