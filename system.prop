@@ -7,6 +7,3 @@ vendor.gatekeeper.disable_spu=true
 
 # Battery Property
 ro.charger.enable_suspend=1
-
-# Android 12
-ro.build.version.release=12
