@@ -142,6 +142,7 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := true
 # Tool
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_LIBRESETPROP := true
 			     
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -169,6 +170,6 @@ PLATFORM_VERSION := 11.0
 TW_HAS_EDL_MODE := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS :=true
 
-BOARD_AVB_BOOT_ADD_HASH_FOOTER_ARGS += \
---prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
---prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
+#BOARD_AVB_BOOT_ADD_HASH_FOOTER_ARGS += \
+#--prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
+#--prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
