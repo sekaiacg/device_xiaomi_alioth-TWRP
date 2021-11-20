@@ -41,10 +41,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 #    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
 #    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
 
-ifeq ($(TW_ANDROID_BUILD_VERSION),12)
-PRODUCT_PROPERTY_OVERRIDES += ro.build.version.release=12
-endif
-
 PRODUCT_COPY_FILES += \
 	$(OUT_DIR)/target/product/alioth/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/$(PRODUCT_RELEASE_NAME)/modules,recovery/root/vendor/lib/modules)
