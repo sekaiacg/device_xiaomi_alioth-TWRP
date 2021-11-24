@@ -85,10 +85,10 @@ void vendor_load_properties() {
     property_override("ro.virtual_ab.enabled", "true");
     property_override("ro.bootimage.build.date.utc", "1609430400");
     property_override("ro.build.date.utc", "1609430400");
-    const std::string twrp_name = GetProperty("ro.product.system.name", "");
-    if (twrp_name == "twrp_alioth") {
+    const std::string twrp_name = GetProperty("ro.twrp.device.name", "");
+    if (twrp_name == "alioth") {
       model_property_override("alioth", "Redmi K40");
-    } else if (twrp_name == "twrp_thyme"){
+    } else if (twrp_name == "thyme"){
       model_property_override("thyme", "Mi 10S");
     } else {
       model_property_override("unknow", "unknow name");
