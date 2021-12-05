@@ -158,7 +158,9 @@ TW_USE_TOOLBOX := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
+ifeq ($(TW_DEFAULT_LANGUAGE),)
 TW_DEFAULT_LANGUAGE := zh_CN
+endif
 TW_DEFAULT_BRIGHTNESS := 300
 TW_Y_OFFSET := 91
 TW_H_OFFSET := -91
