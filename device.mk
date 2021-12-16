@@ -15,11 +15,12 @@
 #
 
 PRODUCT_PACKAGES += \
-    bootctrl.kona \
-    bootctrl.kona.recovery \
+    bootctrl.xiaomi_sm8250 \
+    bootctrl.xiaomi_sm8250.recovery \
     android.hardware.boot@1.1-service \
     android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery
+    android.hardware.boot@1.1-impl-qti.recovery \
+    fastbootd
 
 PRODUCT_HOST_PACKAGES += \
     libandroidicu
