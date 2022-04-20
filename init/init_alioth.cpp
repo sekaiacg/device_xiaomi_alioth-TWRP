@@ -88,7 +88,9 @@ void vendor_load_properties() {
     const std::string twrp_name = GetProperty("ro.twrp.device.name", "");
     if (twrp_name == "alioth") {
       model_property_override("alioth", "Redmi K40");
-    } else if (twrp_name == "thyme"){
+    } else if (twrp_name == "munch") {
+      model_property_override("munch", "Redmi K40S");
+    } else if (twrp_name == "thyme") {
       model_property_override("thyme", "Mi 10S");
     } else {
       model_property_override("unknow", "unknow name");
