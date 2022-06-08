@@ -13,6 +13,3 @@ persist.sys.timezone=Asia/Shanghai
 
 # Reset allocatable space
 ro.dynamic.full_size=9126805504
-
-# Android 12
-ro.build.version.release=12
