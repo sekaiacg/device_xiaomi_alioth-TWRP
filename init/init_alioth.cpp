@@ -92,6 +92,8 @@ void vendor_load_properties() {
       model_property_override("munch", "Redmi K40S");
     } else if (twrp_name == "thyme") {
       model_property_override("thyme", "Mi 10S");
+    } else if (twrp_name == "psyche") {
+      model_property_override("psyche", "Mi 12X");
     } else {
       model_property_override("unknow", "unknow name");
     }
