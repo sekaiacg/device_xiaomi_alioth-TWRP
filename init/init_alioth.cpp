@@ -84,10 +84,17 @@ void vendor_load_properties() {
     property_override("ro.bootimage.build.date.utc", "1609430400");
     property_override("ro.build.date.utc", "1609430400");
     const std::string twrp_name = GetProperty("ro.twrp.device.name", "");
+    bool isCN = GetProperty("ro.boot.hwc", "") == "CN";
     if (twrp_name == "alioth") {
-      model_property_override("alioth", "Redmi K40");
+      if (isCN)
+        model_property_override("alioth", "Redmi K40");
+      else
+        model_property_override("alioth", "Redmi POCO F3");
     } else if (twrp_name == "munch") {
-      model_property_override("munch", "Redmi K40S");
+      if (isCN)
+        model_property_override("munch", "Redmi K40S");
+      else
+        model_property_override("munch", "Redmi POCO F4");
     } else if (twrp_name == "thyme") {
       model_property_override("thyme", "Mi 10S");
     } else if (twrp_name == "psyche") {
