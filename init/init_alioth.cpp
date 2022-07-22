@@ -79,8 +79,6 @@ void model_property_override(const std::string& device, const std::string& model
 }
 
 void vendor_load_properties() {
-    //property_override("ro.vendor.build.security_patch", "2099-12-31");
-    property_override("ro.virtual_ab.enabled", "true");
     property_override("ro.bootimage.build.date.utc", "1609430400");
     property_override("ro.build.date.utc", "1609430400");
     const std::string twrp_name = GetProperty("ro.twrp.device.name", "");
