@@ -3,7 +3,8 @@
         vendor_framework_compatibility_matrix.xml
         qssi_vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
-        goodix_fod6_matrix.xml
+        vendor_framework_compatibility_matrix.xml
+        vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
@@ -17,6 +18,8 @@
         vendor_framework_compatibility_matrix.xml
         vendor.xiaomi.cit.wifi@1.0_compatibility_matrix.xml
         vendor.xiaomi.cit.bluetooth@1.0_compatibility_matrix.xml
+        vendor.xiaomi.sensor.communicate@1.0_compatibility_matrix.xml
+        dax_framework_compatibility_matrix.xml
 -->
 <compatibility-matrix version="4.0" type="framework">
     <hal format="hidl" optional="true">
@@ -86,6 +89,18 @@
             <name>ISupplicant</name>
             <instance>default</instance>
             <instance>wigigp2p</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>com.fingerprints.extension</name>
+        <version>3.0</version>
+        <interface>
+            <name>IFingerprintNavigation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -172,6 +187,14 @@
         <version>1.0</version>
         <interface>
             <name>IDisplayPostproc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.dolby.hardware.dms</name>
+        <version>2.0</version>
+        <interface>
+            <name>IDms</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1119,10 +1142,10 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <name>vendor.xiaomi.hardware.fingerprintextension</name>
         <version>1.0</version>
         <interface>
-            <name>IMiFxTunnel</name>
+            <name>IXiaomiFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1139,6 +1162,14 @@
         <version>1.0</version>
         <interface>
             <name>IMiCharge</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.midevauth</name>
+        <version>2.0</version>
+        <interface>
+            <name>IMidevauthService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1235,6 +1266,14 @@
         <version>1.0</version>
         <interface>
             <name>IVSIMService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.sensor.communicate</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorCommunicate</name>
             <instance>default</instance>
         </interface>
     </hal>
