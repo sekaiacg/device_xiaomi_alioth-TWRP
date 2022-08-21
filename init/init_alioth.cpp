@@ -92,23 +92,25 @@ void vendor_load_properties() {
     property_override("ro.bootimage.build.date.utc", "1609430400");
     property_override("ro.build.date.utc", "1609430400");
     const std::string twrp_name = GetProperty("ro.twrp.device.name", "");
+    const std::string sku = GetProperty("ro.boot.product.hardware.sku", "");
     bool isCN = GetProperty("ro.boot.hwc", "") == "CN";
     if (twrp_name == "alioth") {
-      const std::string sku = GetProperty("ro.boot.product.hardware.sku", "");
       if (sku == "pro") {
         if (isCN)
           model_property_override("alioth", "Redmi K40");
         else
-          model_property_override("alioth", "Redmi POCO F3");
+          model_property_override("alioth", "POCO F3");
       } else {
-          model_property_override("alioth", "Mi 11X");
-          name_property_override("aliothin");
+        model_property_override("alioth", "Mi 11X");
+        name_property_override("aliothin");
       }
-    } else if (twrp_name == "munch") {
-      if (isCN)
-        model_property_override("munch", "Redmi K40S");
-      else
-        model_property_override("munch", "Redmi POCO F4");
+    } else if (sku == "munch") {
+      model_property_override("munch", "Redmi K40S");
+    } else if (sku == "munchg") {
+      model_property_override("munch", "POCO F4");
+    } else if (sku == "munchin") {
+      model_property_override("munch", "POCO F4");
+      name_property_override("munch_in");
     } else if (twrp_name == "thyme") {
       model_property_override("thyme", "Mi 10S");
     } else if (twrp_name == "psyche") {
