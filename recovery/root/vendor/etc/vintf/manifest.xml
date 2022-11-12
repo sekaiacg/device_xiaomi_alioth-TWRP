@@ -1,8 +1,8 @@
 <!--
     Input:
-        manifest.xml
         manifest_ds_thyme.xml
         manifest.xml
+        gf.xml
         manifest.xml
         manifest.xml
         manifest.xml
@@ -694,6 +694,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IXiaomiFingerprint/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMiFxTunnel</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IMiFxTunnel/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.touchfeature</name>
