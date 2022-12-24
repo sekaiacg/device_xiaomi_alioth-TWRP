@@ -5,6 +5,8 @@
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
+        vendor_framework_compatibility_matrix.xml
+        vendor_framework_compatibility_matrix.xml
         vendor.goodix.hardware.sensors.health.xml
         vendor.fs.fsalsps@1.0.xml
         fod_matrix.xml
@@ -74,6 +76,7 @@
             <name>IComponentStore</name>
             <instance>default</instance>
             <instance>dolby</instance>
+            <instance>ozoaudio</instance>
             <instance>software</instance>
         </interface>
     </hal>
@@ -125,6 +128,22 @@
             <name>ISupplicant</name>
             <instance>default</instance>
             <instance>wigigp2p</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>com.fingerprints.extension</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFingerprintEngineering</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintNavigation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -239,6 +258,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.goodix.hardware.sensors.health</name>
         <version>1.0</version>
         <interface>
@@ -317,6 +344,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.gnss</name>
+        <version>1-2</version>
         <interface>
             <name>ILocAidlGnss</name>
             <instance>default</instance>
@@ -774,7 +802,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1-7</version>
+        <version>1-8</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -1546,6 +1574,14 @@
         <version>1.0</version>
         <interface>
             <name>ITouchFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.modem.qms</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiQms</name>
             <instance>default</instance>
         </interface>
     </hal>
